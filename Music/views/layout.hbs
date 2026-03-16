@@ -1,10 +1,35 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title}}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    {{{body}}}
-  </body>
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1>{{pageTitle}}</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Início</a></li>
+                    <li><a href="/explorar">Explorar</a></li> 
+                    <li><a href="/perfil" class="btn-perfil">Perfil</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        {{{body}}}
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2023 Harmony Hub. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
 </html>

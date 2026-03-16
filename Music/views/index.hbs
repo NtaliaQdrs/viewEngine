@@ -1,2 +1,44 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<section class="hero">
+    <div class="hero-content">
+        <h2>{{welcomeMessage}}</h2>
+        <p>Explore um universo de sons e encontre sua próxima paixão musical.</p>
+        <a href="#releases" class="btn">Ver Lançamentos</a>
+    </div>
+</section>
+
+<section id="artists" class="featured-section">
+    <h3>Artistas em Destaque</h3>
+    <div class="artist-grid">
+        {{#each featuredArtists}}
+        <div class="artist-card">
+            <img src="{{this.image}}" alt="{{this.name}}">
+            <h4>{{this.name}}</h4>
+            <p>{{this.genre}}</p>
+        </div>
+        {{/each}}
+    </div>
+</section>
+
+<section id="releases" class="featured-section">
+    <h3>Últimos Lançamentos</h3>
+    <div class="release-grid">
+        {{#each latestReleases}}
+        <div class="release-card">
+            <img src="{{this.cover}}" alt="{{this.title}}">
+            <h4>{{this.title}}</h4>
+            <p>{{this.artist}}</p>
+        </div>
+        {{/each}}
+    </div>
+</section>
+
+<section id="contact" class="contact-section">
+    <h3>Fale Conosco</h3>
+    <p>Tem alguma sugestão ou quer nos enviar sua música? Entre em contato!</p>
+    <form class="contact-form">
+        <input type="text" placeholder="Seu Nome">
+        <input type="email" placeholder="Seu Email">
+        <textarea placeholder="Sua Mensagem"></textarea>
+        <button type="submit" class="btn">Enviar</button>
+    </form>
+</section>

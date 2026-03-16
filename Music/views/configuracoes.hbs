@@ -1,0 +1,23 @@
+<h2>Configurações do Perfil</h2>
+
+<div class="settings-form">
+    <p>
+        <strong>Tema:</strong>
+        {{preferencias.tema}}
+    </p>
+    <p>
+        <strong>Notificações:</strong>
+        {{#if preferencias.notificacoes}}
+            Ativadas
+        {{else}}
+            Desativadas
+        {{/if}}
+    </p>
+    <p>
+        <strong>Idioma:</strong>
+        {{preferencias.idioma}}
+    </p>
+    
+    <!-- Link para voltar ao perfil -->
+    <a href="/perfil" class="button">Voltar ao Perfil</a>
+</div>

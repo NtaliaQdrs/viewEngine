@@ -1,0 +1,15 @@
+<h2>Meu Histórico de Atividades</h2>
+
+<div class="history-list">
+    {{#each historico}}
+        <div class="history-item" style="border-bottom: 1px solid #ddd; padding: 10px 0;">
+            <strong>{{this.data}}:</strong> {{this.acao}} - <em>{{this.item}}</em>
+        </div>
+    {{else}}
+        <p>Nenhuma atividade recente encontrada.</p>
+    {{/each}}
+</div>
+
+<div class="profile-actions" style="margin-top: 20px;">
+    <a href="/perfil" class="button">Voltar ao Perfil</a>
+</div>

@@ -1,7 +1,23 @@
 doctype html
-html
+html(lang="pt-BR" )
   head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel="stylesheet", href="../stylesheets/style.css")
   body
-    block content // blobo de conteudo
+    header
+      h1 Biblioteca Online
+      nav
+        ul
+          li
+            a(href="/") Início
+          li
+            a(href="/livros") Livros
+          li
+            a(href="/autores") Autores
+       
+    main
+      block content
+    footer
+      p &copy; 2023 Biblioteca Online. Todos os direitos reservados.

@@ -1,5 +1,16 @@
-extends layout
+extends layout.pug
 
 block content
-  h1= title
-  p Welcome to #{title}
+  section.hero
+    h2 Encontre seu próximo livro favorito
+    p Explore nossa vasta coleção de livros e descubra novos mundos.
+    a.button(href="/livros") Ver Livros
+  section.featured-books
+    h2 Livros em Destaque
+    .book-list
+      each livro in livrosEmDestaque
+        .book-card
+          img(src=livro.capa, alt="Capa do Livro")
+          h3= livro.titulo
+          p= livro.autor
+          a(href="#") Ver Detalhes

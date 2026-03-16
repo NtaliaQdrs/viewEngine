@@ -1,0 +1,19 @@
+<section class="explore-header">
+    <h2>Explore Novos Horizontes</h2>
+    <p>Navegue pelos gêneros musicais e descubra o que está em alta no mundo.</p>
+</section>
+
+<div class="genre-grid">
+    {{#each genres}}
+    <div class="genre-card">
+        <div class="genre-icon">{{this.icon}}</div>
+        <h3>{{this.name}}</h3>
+        <p>{{this.description}}</p>
+        <a href="#" class="btn-small">Ver Playlists</a>
+    </div>
+    {{/each}}
+</div>
+
+<section class="back-home">
+    <a href="/" class="btn">Voltar para o Início</a>
+</section>
