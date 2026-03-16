@@ -1,0 +1,18 @@
+extends layout.pug
+
+block content
+  h2 Nossos Autores
+  .author-list
+    each autor in autores
+      .author-card
+        img(src=autor.foto, alt=autor.nome, style="width: 150px; border-radius: 8px;")
+        h3= autor.nome
+        p 
+          strong Nacionalidade: 
+          | #{autor.nacionalidade}
+        p 
+          strong Biografia: 
+          | #{autor.biografia}
+        
+        // Link atualizado para a nova sub-rota de detalhes
+        a.button(href="/autores/detalhes/" + autor.id) Ver Detalhes

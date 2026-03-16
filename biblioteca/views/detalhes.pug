@@ -1,0 +1,21 @@
+extends layout.pug
+
+block content
+  .author-details
+    h2= autor.nome
+    img(src=autor.foto, alt="Foto de " + autor.nome)
+    
+    p
+      strong Nacionalidade: 
+      | #{autor.nacionalidade}
+    p
+      strong Biografia: 
+      | #{autor.biografia}
+    
+    h3 Principais Obras:
+    ul
+      each obra in autor.obras
+        li= obra
+
+    div
+      a.button(href="/autores") Voltar para Autores

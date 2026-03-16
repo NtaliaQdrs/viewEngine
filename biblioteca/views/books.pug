@@ -1,0 +1,13 @@
+
+extends layout.pug
+
+block content
+  h2 Nossa Coleção de Livros
+  .book-list
+    each livro in livros
+      .book-card
+        img(src=livro.capa, alt="Capa do Livro")
+        h3= livro.titulo
+        p= livro.autor
+        p Ano: #{livro.ano}
+        a(href="#") Ver Detalhes
