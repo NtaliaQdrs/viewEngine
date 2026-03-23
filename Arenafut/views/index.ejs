@@ -1,11 +1,45 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Arena Soccer - Home</title>
+    <link rel="stylesheet" href="/stylesheets/style.css"> </head>
+
+</head>
+<body>
+    <nav>
+        <h2>Arena Soccer ⚽</h2>
+    </nav>
+
+    <header>
+        <h1>Bem-vindo à Melhor Arena da Região!</h1>
+        <p>Garanta seu horário e mostre seu talento.</p>
+        
+        <a href="/agendar" style="padding: 10px 20px; background: green; color: white; text-decoration: none; border-radius: 5px;">
+            AGENDAR AGORA
+        </a>
+    </header>
+
+    <main class="container">
+    <h2 class="section-title">Arenas Disponíveis</h2>
+    
+    <div class="arenas-grid">
+        <% arenas.forEach(arena => { %>
+            <div class="arena-card">
+                <div class="arena-img" style="background-image: url('<%= arena.img %>')"></div>
+                <div class="arena-info">
+                    <h3><%= arena.nome %></h3>
+                    <p>📍 <%= arena.local %></p>
+                    <p class="price">R$ <%= arena.preco %>,00 / hora</p>
+                    <a href="/agendar?arena=<%= arena.id %>" class="btn-card">Reservar</a>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</main>
+
+    <% if (typeof msg !== 'undefined' && msg === 'sucesso') { %>
+        <script>alert('Reserva enviada com sucesso!');</script>
+    <% } %>
+</body>
 </html>
